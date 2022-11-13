@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is self-learning project created with the help of https://www.youtube.com/watch?v=b9eMGE7QtTk&t=3114s&ab_channel=JavaScriptMastery
+Rest of the documentation is the standard documentation from nodeJs create-react-app.
+
 
 ## Available Scripts
 
