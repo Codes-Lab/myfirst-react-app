@@ -11,9 +11,11 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
   const searchMovies = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
-    const data = await response.json();
-    setMovies(data.Search);
+    if (title !== '') {
+      const response = await fetch(`${API_URL}&s=${title}`);
+      const data = await response.json();
+      setMovies(data.Search);
+    }
   }
 
   useEffect(() => {
@@ -39,7 +41,7 @@ function App() {
         
         <input placeholder='Search for movies' value={searchTerm} onChange={(event) => {setSearchTerm(event.target.value) }} onKeyPress={(event) => {
           if (event.key === 'Enter'){
-             searchMovies(searchTerm) 
+                searchMovies(searchTerm)
           }
         }
         }/>
